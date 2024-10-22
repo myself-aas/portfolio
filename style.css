@@ -35,12 +35,15 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .skills, .teams, .contact, footer{
+.about, .education, .skills, .activities, .projects, .services, .research, .certificates, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
-.services .serv-content,
+.education .edu-content,
 .skills .skills-content,
+.activities .actv-content,
+.services .serv-content,
+.research .res-content,
 .contact .contact-content{
     display: flex;
     flex-wrap: wrap;
@@ -61,7 +64,7 @@ section .title::before{
     position: absolute;
     bottom: 0px;
     left: 50%;
-    width: 180px;
+    width: 280px;
     height: 3px;
     background: #111;
     transform: translateX(-50%);
@@ -114,7 +117,7 @@ section .title::after{
 .navbar .menu li a{
     display: block;
     color: #fff;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
     margin-left: 25px;
     transition: color 0.3s ease;
@@ -129,7 +132,7 @@ section .title::after{
 /* menu btn styling */
 .menu-btn{
     color: #fff;
-    font-size: 23px;
+    font-size: 20px;
     cursor: pointer;
     display: none;
 }
@@ -257,21 +260,25 @@ section .title::after{
     background: none;
 }
 
-/* services section styling */
-.services, .teams{
+/* education section styling */
+.education, .activities, .services, .certificates{
     color:#fff;
     background: #111;
 }
+.education .title::before,
+.activities .title::before,
 .services .title::before,
-.teams .title::before{
+.certificates .title::before{
     background: #fff;
 }
+.education .title::after,
+.activities .title::after,
 .services .title::after,
-.teams .title::after{
+.certificates .title::after{
     background: #111;
-    content: "what i provide";
+    content: "what i learned";
 }
-.services .serv-content .card{
+.education .edu-content .card{
     width: calc(33% - 20px);
     background: #222;
     text-align: center;
@@ -280,27 +287,23 @@ section .title::after{
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover{
+.education .edu-content .card:hover{
     background: crimson;
 }
-.services .serv-content .card .box{
+.education .edu-content .card .box{
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover .box{
+.education .edu-content .card:hover .box{
     transform: scale(1.05);
 }
-.services .serv-content .card i{
-    font-size: 50px;
-    color: crimson;
-    transition: color 0.3s ease;
-}
-.services .serv-content .card:hover i{
-    color: #fff;
-}
-.services .serv-content .card .text{
+.education .edu-content .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
+}
+.education .edu-content .card .box h4{
+    font-size: 15px;
+    font-weight: 300;
 }
 
 /* skills section styling */
@@ -348,6 +351,11 @@ section .title::after{
     font-weight: 500;
     font-size: 18px;
 }
+.skills .skills-content .right span p{
+    text-align: right;
+    font-weight: 400;
+    font-size: 8px;
+}
 .skills .skills-content .right .line{
     height: 5px;
     width: 100%;
@@ -362,27 +370,261 @@ section .title::after{
     top: 0;
     background: crimson;
 }
-.skills-content .right .html::before{
-    width: 90%;
+.skills-content .right .languages::before{
+    width: 75%;
 }
-.skills-content .right .css::before{
-    width: 60%;
+.skills-content .right .cv::before{
+    width: 85%;
 }
-.skills-content .right .js::before{
-    width: 80%;
-}
-.skills-content .right .php::before{
-    width: 50%;
-}
-.skills-content .right .mysql::before{
+.skills-content .right .da::before{
     width: 70%;
 }
-
-/* teams section styling */
-.teams .title::after{
-    content: "who with me";
+.skills-content .right .packages::before{
+    width: 80%;
 }
-.teams .carousel .card{
+.skills-content .right .cc::before{
+    width: 60%;
+}
+.skills-content .right .spec::before{
+    width: 70%;
+}
+.skills-content .right .web::before{
+    width: 85%;
+}
+
+/* Cocurricular Activities section styling */
+.activities .title::after{
+    content: "what i organized";
+}
+.activities .actv-content .card{
+    width: 100%;
+    background: #222;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.activities .actv-content .card .list{
+    position: relative;
+    padding-left: 50px;
+}
+.activities .actv-content .card .list ul{
+    position: relative;
+}
+.activities .actv-content .card .list ul li{
+    position: relative;
+    left: 0; 
+    list-style: none;
+    margin: 4px 0;
+    border-left: solid 2px #DC143C;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.activities .actv-content .card .list ul li::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #DC143C;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.5s;
+}
+.activities .actv-content .card .list ul li:hover::before{
+    transform: scaleX(1);
+}
+.activities .actv-content .card .list ul li:hover{
+    left: 10px;
+}
+.activities .actv-content .card .list ul li span{
+    position: relative;
+    padding: 8px;
+    display: inline-block;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+/* projects section styling */
+.projects .title::after{
+    content: "what i developed";
+}
+.projects .carousel .card{
+    background: #dfdfdf;
+    padding: 50px 25px;
+    cursor: pointer;
+    border-radius: 6px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.projects .carousel .card:hover{
+    background: crimson;
+}
+.projects .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.projects .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.projects .carousel .card p{
+    font-size: 14px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.projects .carousel .card:hover p{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.projects .carousel .card .text{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.projects .carousel .card:hover .text{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.projects .carousel .card img{
+    height: 180px;
+    width: 320px;
+    object-fit: cover;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
+}
+.projects .carousel .card:hover img{
+    border-color: #fff;
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid crimson!important;
+    transition: all 0.3s ease;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background: crimson!important;
+}
+.projects .carousel .card .box a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.projects .carousel .card:hover a{
+    color: crimson;
+    background: #fff;
+    border-color: #fff;
+}
+
+/* services section styling */
+.services .title::after{
+    content: "what i provide";
+}
+.services .serv-content .card{
+    height: 280px;
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover{
+    background: crimson;
+}
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.services .serv-content .card i{
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+.services .serv-content .card:hover i{
+    color: #fff;
+}
+.services .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+/* research & publications section styling */
+.research .title::after{
+    content: "what i published";
+}
+.research .res-content .column{
+    position: relative;
+    width: calc(33% - 20px);
+}
+.research .res-content .left .text,
+.research .res-content .middle .text,
+.research .res-content .right .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.research .res-content .left p,
+.research .res-content .middle p,
+.research .res-content .right p{
+    text-align: justify;
+}
+.research .res-content .left a,
+.research .res-content .middle a,
+.research .res-content .right a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.research .res-content .left a:hover,
+.research .res-content .middle a:hover,
+.research .res-content .right a:hover{
+    color: crimson;
+    background: none;
+}
+
+/* certificates section styling */
+.certificates .title::after{
+    content: "what i attained";
+}
+.certificates .carousel .card{
+    height: 400px;
     background: #222;
     border-radius: 6px;
     padding: 25px 35px;
@@ -390,33 +632,37 @@ section .title::after{
     overflow: hidden;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover{
+.certificates .carousel .card:hover{
     background: crimson;
 }
-.teams .carousel .card .box{
+.certificates .carousel .card .box{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover .box{
+.certificates .carousel .card:hover .box{
     transform: scale(1.05);
 }
-.teams .carousel .card .text{
-    font-size: 25px;
+.certificates .carousel .card p{
+    font-size: 14px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
-.teams .carousel .card img{
-    height: 150px;
-    width: 150px;
+.certificates .carousel .card .text{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.certificates .carousel .card img{
+    height: 200px;
+    width: 270px;
     object-fit: cover;
-    border-radius: 50%;
     border: 5px solid crimson;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover img{
+.certificates .carousel .card:hover img{
     border-color: #fff;
 }
 .owl-dots{
@@ -476,6 +722,9 @@ section .title::after{
 }
 .contact .contact-content .info .sub-title{
     color: #333;
+}
+.contact .contact-content .info .sub-title a{
+    color: #111;
 }
 .contact .right form .fields{
     display: flex;
@@ -592,8 +841,8 @@ footer span a:hover{
     }
     .navbar .menu li a{
         display: inline-block;
-        margin: 20px 0;
-        font-size: 25px;
+        margin: 15px 0;
+        font-size: 16px;
     }
     .home .home-content .text-2{
         font-size: 70px;
@@ -619,11 +868,20 @@ footer span a:hover{
     .about .about-content .right{
         flex: 100%;
     }
+    .education .edu-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .activities .actv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
     .services .serv-content .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
     .skills .skills-content .column,
+    .research .res-content .column,
     .contact .contact-content .column{
         width: 100%;
         margin-bottom: 35px;
@@ -643,6 +901,12 @@ footer span a:hover{
     .home .home-content a{
         font-size: 20px;
     }
+    .education .edu-content .card{
+        width: 100%;
+    }
+    .activities .actv-content .card{
+        width: 100%;
+    }
     .services .serv-content .card{
         width: 100%;
     }
@@ -656,6 +920,9 @@ footer span a:hover{
         font-size: 27px;
     }
     .about .about-content .right .text,
+    .research .res-content .left .text,
+    .research .res-content .middle .text,
+    .research .res-content .right .text,
     .skills .skills-content .left .text{
         font-size: 19px;
     }
