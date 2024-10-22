@@ -3,7 +3,7 @@
 Welcome to my portfolio repository! This project represents my expertise in **web & app design**, **system development**, and **AI & machine learning**. It showcases my technical skills, creativity, and dedication to delivering high-quality, responsive web solutions. This portfolio is a snapshot of my professional journey, highlighting key projects and services I offer.
 
 ## 🌐 Live Preview
-Experience the live version of the portfolio here: [Live Demo](https://your-portfolio-link.com)
+Experience the live version of the portfolio here: [Live Demo](https://myself-aas.github.io/portfolio/)
 
 ## 🖥️ Project Overview
 This portfolio demonstrates my capabilities across various disciplines in **web development** and **software engineering**. It includes sections dedicated to:
