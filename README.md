@@ -66,7 +66,7 @@ If you have suggestions for improvement or want to contribute, feel free to:
 ## 🔗 Connect with Me
 - **LinkedIn**: [Ashif Ahmed Shuvo](https://www.linkedin.com/in/me-aas/)
 - **GitHub**: [Ashif Ahmed Shuvo](https://github.com/myself-aas)
-- **Email**: [shuvo.1807016@bau.edu.bd](mailto:shuvo.1807016@bau.edu.bd)
+- **Email**: [shuvoasifahmed@gmail.com](mailto:shuvoasifahmed@gmail.com)
 
 ## 📜 License
 This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
